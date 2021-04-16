@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let todo of todos">
+      {{ todo }}
+    </ion-item>
+  </ion-list>
+
+  <ion-list inset>
+    <ion-item>
+      <ion-label floating>Todo</ion-label>
+      <ion-input type="text" [(ngModel)]="currentTodo"></ion-input>
+    </ion-item>
+    <ion-list>
+      <button ion-button block (click)="onAddTodo()">Todo hinzufügen</button>
+    </ion-list>
+  </ion-list>
+
+</ion-content>
